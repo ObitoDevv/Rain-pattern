@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Grid from './Grid';
+import styled from 'styled-components';
 
-function App() {
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+  font-family: 'Arial', sans-serif;
+`;
+
+const Header = styled.header`
+  font-size: 2em;
+  margin-bottom: 20px;
+`;
+
+const Footer = styled.footer`
+  margin-top: 20px;
+  font-size: 0.8em;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header>Rain Pattern Game</Header>
+      <Grid />
+      <Footer>© 2024 Rain Game - Divyanshu</Footer>
+    </AppContainer>
   );
-}
+};
 
 export default App;
